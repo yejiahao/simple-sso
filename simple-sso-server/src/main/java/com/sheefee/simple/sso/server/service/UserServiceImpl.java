@@ -9,18 +9,18 @@ import com.sheefee.simple.sso.server.dao.UserDao;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
-	@Autowired
-	private UserDao userDao;
-	@Value("${db.table}")
-	private String table;
-	@Value("${db.table.userid}")
-	private String userid;
-	@Value("${db.table.username}")
-	private String username;
-	@Value("${db.table.password}")
-	private String password;
+    @Autowired
+    private UserDao userDao;
+    @Value("${db.table}")
+    private String table;
+    @Value("${db.table.userid}")
+    private String userid;
+    @Value("${db.table.username}")
+    private String username;
+    @Value("${db.table.password}")
+    private String password;
 
-	public User find(User user) {
-		return userDao.find(user, table, userid, username, password);
-	}
+    public User find(User user) {
+        return userDao.find(user, table, userid, username, password);
+    }
 }
