@@ -1,20 +1,17 @@
 package com.sheefee.test.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class TestController {
-    @RequestMapping("/test")
-    public String test(HttpServletRequest request, Model model) {
+    @RequestMapping(value = {"/", "/test"})
+    public String test() {
         return "test";
     }
 
     @RequestMapping("/success")
-    public String success(HttpServletRequest request, Model model) {
+    public String success() {
         return "success";
     }
 }
